@@ -1,0 +1,197 @@
+/*공통 디자인*/
+h2{font-size: 1.875rem; display: inline-block;margin-bottom: 30px;}
+h3{font-size: 0.975rem; display: inline-block;}
+
+
+
+
+
+
+
+
+
+#top_popup{position: relative;}
+#top_popup img{width:100%; min-width:1024px;}
+#top_popup .close{/*팝업창 닫기버튼*/
+    position: absolute;right:100px;top:calc(50% - 25px) ; text-indent: -9999999999px;
+    background: none;border: none;
+}
+#top_popup .close::before{content: ''; display: block;width: 2px; height: 50px; background-color: #000;
+                          transform: rotate(45deg);position: absolute;top:0px;}
+#top_popup .close::after{content: ''; display: block;width: 2px; height: 50px; background-color: #000;
+    transform: rotate(-45deg);position: absolute;top: 0;}
+
+/*********************section****************************/
+#sec2 .inner{/*공지사항부분*/
+    position: relative;
+}
+#sec2 .notice,#sec2 .purp{
+    width: 500px; height: 100px;
+    /*width:celc((100% - 50px)/2)검정네모가 커졌다 줄었다 하고싶으면 하기*/
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+}
+#sec2 .notice{
+    left: 0;
+}
+#Sec2 .purp{
+    right: 0;
+}
+
+/****sec3****/
+#sec3 .inner > div {
+    margin-right: 35px;
+    width: calc((100% - 70px) / 3);
+    box-sizing: border-box;
+    border: 1px solid#E6E6E6;
+    float: left;
+    position: relative;/*보라색테두리의 포지션*/
+    margin-bottom: 110px;
+}
+#sec3 .inner > div:last-child{
+    margin-right: 0;
+}
+#sec3::after{
+    content: '';display: block;clear: both;
+}
+/*테두리 선 만들기 (움직이는 선)*/
+#sec3 .inner > div a{display: block; height: 400px; box-sizing: border-box;}
+#sec3 .inner > div a::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0; top: 0;/*위에서 왼쪽으로 선이 생김 right bottom으로 하면 밑에서부터 생긴다*/
+    border: 1px solid transparent;/* transparent하면 안보이게함 처음에는 안보이게 한다*/
+}
+#sec3 .inner > div:hover a::before{
+    width: calc(100% - 2px);/*선 두께를 빼야 선이 보임*/
+    height:calc(100% - 2px);
+    border-top-color: blueviolet;
+    border-right-color:  blueviolet;
+    transition: width 0.4s, height 0.4s 0.4s;
+}
+#sec3 .inner > div a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0; bottom: 0;
+    border: 1px solid transparent;
+}
+#sec3 .inner > div:hover a::after{
+    width: calc(100% - 2px);
+    height:calc(100% - 2px);
+    border-bottom-color: blueviolet;
+    border-left-color: blueviolet;
+    transition: width 0.4s, height 0.4s 0.4s;
+}
+
+
+#sec3 img{width: 100%;}
+#sec3 .clinc_txt{display: none;}
+#sec3 .inner > div button{transition: 0.5s;}
+#sec3 .inner > div:hover .button{background-color: blueviolet;}
+#sec3 .inner > div:hover .clinc_txt{display: block;}
+#sec3 .inner > div:hover .clinc_img{display: none;}
+
+
+#sec4 .box1 img{
+    width:33.5%; height: 320px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 110px;
+}
+#sec4 .box2 img{
+    width:calc(66.5% - 20px);
+    box-sizing:border-box ;
+     height: 320px;
+     display: block;
+     float: left;
+     overflow: hidden;
+     margin-bottom: 110px;
+    }
+
+
+
+#sec5 h2,#sec5 h3{display: block;}
+#sec5 h3{margin-bottom: 35px;}
+#sec5 button{
+    border: none;
+    background: none;
+}
+#sec5 button img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 110px;
+    display: block;
+    margin-right: 10px;
+}
+#sec5 .inner{
+    margin-bottom: 110px;
+}
+#sec5 .sec5_title{
+    width: 400px;
+    float: left;
+    margin-right: 35px;
+}
+#sec5 .sec5_title img{
+    width: 100%;
+
+}
+#sec5 .sec5_cont{
+    width: calc(100% - 435px);float: left;
+}
+#sec5 .regular div img{
+    margin-right: 20px;
+}
+#sec5::after{
+     content: '';
+     display: block;
+     clear: both;
+}
+#sec6{
+    position: relative;
+}
+#sec6 .story img{
+    width:100%;
+    height: 545px;
+    margin-bottom: 110px;
+}
+#sec6 .btn{
+    position: absolute;
+    top: 100px;
+    left: 100px
+}
+
+
+#sec7 .news{
+    box-sizing: border-box;
+    margin-right:10px ;
+    float: left;
+    width: calc((100% - 20px)/3);
+}
+#sec7 .news:last-child{
+    margin-right: 0;
+}
+#sec7 .news .news_img img{
+  width: 100%;
+  height: 223px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+#sec7 .news .news_txt{
+    box-sizing: border-box;
+    height: 78px;
+    background-color:antiquewhite;
+    font-size: 0.9rem;
+    line-height: 20px;
+    margin-bottom: 110px;
+}
+
