@@ -29,18 +29,63 @@ button{outline:0}
 
 #wrap{width: 100%; min-width: 1024px; overflow: hidden;}
 .inner{min-width: 1024px; max-width: 1280px; margin: 0 auto;}
-#header .top_icon{
-      float: right;
-      height: 75px;
-    
+
+#nav_pop{
+      position: fixed;
+      width: 100%;
+      min-width: 1024px;
+      height: 100%;
+      overflow: auto;
+      background-color: burlywood;
+      z-index: 9999999999;
+      display: none;
+      
 }
+#nav_pop .navpop_inner{
+      width: 1024px;
+      margin:0 auto;
+}
+#nav_pop #nav_logo{
+     position: relative;
+}
+#nav_pop #nav_logo img{
+      width: 200px;
+      margin-bottom:50px;
+      margin-top: 50px;
+}
+#nav_pop #nav_logo .nav_close{
+      position: absolute;
+      top:0;
+      right: 0;
+}
+#nav_pop .depth1 > li{
+      width: 25%;
+      float: left;
+      margin-bottom: 100px;
+}
+#nav_pop .depth1 > li > a{
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      display: block;
+      color: #fff;
+}
+#nav_pop .depth1 ul{
+
+}
+#nav_pop .depth2 > li{
+      margin-bottom: 10px;
+}
+
+
+
+
 
 /*네비4 */
 #header .inner{position: relative;}
 #nav4 .depth1{float: left;}
 #nav4 .depth1 > li {float:left; padding: 0 20px;}
 #nav4 .depth1 > li > a {display: block;
-        text-align: center;font-size:1rem;color:#333;
+        text-align: center;font-size:0.9rem;color:#333;
         font-weight: bold; line-height: 75px;
         }
         #nav4 .depth1 > li > a:after{content: '';height: 3px; background-color: red;
@@ -71,12 +116,17 @@ button{outline:0}
 
    
 /*header*/
-#header #logo{float: left; width:150px;}/* display: block;display: table;
+#header #logo{float: left; width:120px;}/* display: block;display: table;
 #header #logo a{display: table-cell;vertical-align: middle;} 네비가 중앙에 올 수 있음*/
-#logo img{width: 100%;}
+#logo img{width: 100%;margin-top: 15px;}
 #header #nav4{float: right;} 
 
-.top_icon{}
+
+#header .top_icon{
+      float: right;
+      height: 75px; 
+      transform: translateY(20px);
+}
 .top_icon img{width:35px;}
 .top_icon p{float: left;margin-left: 20px;}
 .top_icon .i_con span{
@@ -86,6 +136,8 @@ button{outline:0}
       background-color: #000;
       margin-bottom: 3px;
 }
+.top_icon .i_con{margin-top: 5px;}
+
 
 /**footer**/
 #footer .inner{
