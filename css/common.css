@@ -94,7 +94,7 @@ button{outline:0}
         #nav4 .depth1 > li:hover > a::after{width: 100%;}
                                            
     
-    #nav4 .depth1{position: static;}  
+    #nav4 .depth1{position: static;padding-right: 150px;}  
 
     #nav4 .nav_box {position:absolute;/*top:calc(2.8rem + 25px);*/top :78px;left:0;width:100%;
                  background-color:rgba(0,0,0,0.5);z-index:96;
@@ -132,11 +132,11 @@ button{outline:0}
 .top_icon .i_con span{
       display: block;
       width: 30px;
-      height: 5px;
+      height: 2px;
       background-color: #000;
       margin-bottom: 3px;
 }
-.top_icon .i_con{margin-top: 5px;}
+.top_icon .i_con{margin-top: 12px;}
 
 
 /**footer**/

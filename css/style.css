@@ -35,6 +35,10 @@ h3{font-size: 0.975rem; display: inline-block;}
 #top_popup .close::after{content: ''; display: block;width: 2px; height: 50px; background-color: #000;
     transform: rotate(-45deg);position: absolute;top: 0;}
 
+#sec2::after,#sec3::after,#sec4::after,#sec5::after,#sec6::after,#sec7::after{
+    content: '';display: block;clear: both;
+    margin-bottom:150px
+}
 /*********************section****************************/
 #sec2 .inner{/*공지사항부분*/
     position: relative;
@@ -44,18 +48,24 @@ h3{font-size: 0.975rem; display: inline-block;}
     /*width:celc((100% - 50px)/2)검정네모가 커졌다 줄었다 하고싶으면 하기*/
     background-color: rgba(0,0,0,0.5);
     position: absolute;
-    bottom: 0;
+    bottom: 155px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding:0 50px;
+    border-radius: 20px
 }
 #sec2 .notice{
     left: 0;
+
 }
 #sec2 .purp{
     right: 0;
 }
 #sec2 .notice_list{
-    line-height:2rem;
+    line-height:100px;
     position:relative;
     color: #fff;
+    overflow:hidden
 }
 
 #sec2 .notice_list span{color:cornflowerblue;font-size:1rem}
@@ -75,11 +85,33 @@ h3{font-size: 0.975rem; display: inline-block;}
 #sec3 .inner > div:last-child{
     margin-right: 0;
 }
-#sec3::after{
-    content: '';display: block;clear: both;
-}
+
 /*테두리 선 만들기 (움직이는 선)*/
 #sec3 .inner > div a{display: block; height: 400px; box-sizing: border-box;}
+#sec3 .inner > div.div1 a{
+    background: url(../images/fff2.jpg);
+    background-size:contain ;
+}
+#sec3 .inner > div.div1 a:hover{
+    background-image: url(../images/starcare1.jpg);
+}
+#sec3 .inner > div.div2 a{
+    background: url(../images/fff1.jpg);
+    background-size:contain ;
+}
+#sec3 .inner > div.div2 a:hover{
+    background-image: url(../images/starcare2.jpg);
+}
+#sec3 .inner > div.div3 a{
+    background: url(../images/fff3.jpg);
+    background-size:contain ;
+}
+#sec3 .inner > div.div3 a:hover{
+    background-image: url(../images/starcare3.jpg);
+}
+
+
+/*
 #sec3 .inner > div.div1 a{
     background: url(../images/starcare1.jpg);
     background-size:contain ;
@@ -101,6 +133,8 @@ h3{font-size: 0.975rem; display: inline-block;}
 #sec3 .inner > div.div3 a:hover{
     background-image: url(../images/fff3.jpg);
 }
+*/
+
 #sec3 .inner > div a::before{
     content: '';
     display: block;
@@ -153,7 +187,6 @@ h3{font-size: 0.975rem; display: inline-block;}
     display: block;
     float: left;
     overflow: hidden;
-    margin-bottom: 110px;
 }
 #sec4 .box2 img{
     width:calc(66.5% - 20px);
@@ -162,7 +195,6 @@ h3{font-size: 0.975rem; display: inline-block;}
      display: block;
      float: left;
      overflow: hidden;
-     margin-bottom: 110px;
     }
 
 
@@ -180,9 +212,7 @@ h3{font-size: 0.975rem; display: inline-block;}
     display: block;
     margin-right: 10px;
 }
-#sec5 .inner{
-    margin-bottom: 110px;
-}
+
 #sec5 .sec5_title{
     width: 400px;
     float: left;
@@ -208,15 +238,19 @@ h3{font-size: 0.975rem; display: inline-block;}
 }
 #sec6 .story img{
     width:100%;
-    height: 545px;
-    margin-bottom: 110px;
+    /*height: 545px;*/
+    /*margin-bottom: 110px;*/
 }
 #sec6 .btn{
     position: absolute;
-    top: 300px;
-    left: 650px
+    top: 230px;
+    left: 900px;
 }
-
+#sec6::after{
+    content: '';
+    display: block;
+    clear: both;
+}
 
 #sec7 .news{
     box-sizing: border-box;
@@ -227,18 +261,26 @@ h3{font-size: 0.975rem; display: inline-block;}
 #sec7 .news:last-child{
     margin-right: 0;
 }
+#sec7 .news .news_img{width:100%;height:223px;overflow: hidden}
 #sec7 .news .news_img img{
   width: 100%;
-  height: 223px;
+  /*height: 223px;*/
   box-sizing: border-box;
   margin-bottom: 5px;
 }
 #sec7 .news .news_txt{
     box-sizing: border-box;
     height: 78px;
-    background-color:antiquewhite;
     font-size: 0.9rem;
     line-height: 20px;
-    margin-bottom: 110px;
 }
-
+#sec7 .news button{
+    border-radius: 20px;
+    background-color: lightskyblue;
+    border: none;
+    padding: 5px 0;
+    width: 80px;
+    color: #fff;
+    transform: translate(300px, -70px);
+    
+}

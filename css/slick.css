@@ -120,20 +120,24 @@
 
 
 
-#sec1{clear: both;}/*메인 슬라이드*/
-#sec1 .slick-slide img{width: 100%; min-width: 1024px;margin-bottom: 70px;}
-#sec1 .slick-arrow{position: absolute; top:50px; z-index: 99999;}
-#sec1 .slick-prev{left: 100px;}
-#sec1 .slick-next{right: 100px;}
+#sec1{clear: both;margin-bottom:70px}/*메인 슬라이드*/
+#sec1 .slick-slide img{width: 100%; min-width: 1024px;}
+#sec1 .slick-arrow{position: absolute; top:350px; z-index: 99999;}
+#sec1 .slick-prev{left: 100px;background: url(../images/left-arrow-2.png) no-repeat center;background-size:50px auto;width:50px;height:100px;
+    border: none;text-indent: -999999999px;
+                  }
+#sec1 .slick-next{right: 100px;background: url(../images/right-arrow-1.png)no-repeat center;background-size:50px auto;width:50px;height:100px;
+    border: none;text-indent: -999999999px;
+}
 #sec1 .slick-dots{position: absolute;right: 200px;bottom:100px}
 #sec1 .slick-dots li button{text-indent: -999999999px;}
-#sec1 .slick-dots li.slick-active button{}
+#sec1 .slick-dots li.slick-active button{}   
 
 
 
-#sec5 .regular{width: 1100px;}
-#sec5 .slick-arrow{position: absolute; top:0px; z-index: 99999;}
-#sec5 .slick-prev{left: 0px;}
-#sec5 .slick-next{right:0px;}
+#sec5 .regular{width: 1100px; top: 100px;}
+#sec5 .slick-arrow{position: absolute; top:-150px; z-index: 99999;text-indent:-99999px}
+#sec5 .slick-prev{left: 0px;background:url(../images/left-arrow-2.png) no-repeat center;background-size:25px auto;width:50px;height:100px;}
+#sec5 .slick-next{left:50px;background:url(../images/right-arrow-1.png) no-repeat center;background-size:25px auto;width:50px;height:100px;}
 #sec5 .slick-dots{position: absolute;right: 200px;bottom:100px}
 #sec5 .slick-dots li button{text-indent: -999999999px;}
